@@ -8,7 +8,7 @@ console.log(cards)
 class CardsContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = cards;
+        this.state = { cards, score: 0 }
     }
 
     //componentDidMount()
@@ -20,20 +20,61 @@ class CardsContainer extends Component {
     //if 0 then score ++
     //cards.clicked will change
     //assign data value to each card = card id 
-    shuffleCards = () => { }
+    //generate a random id for each image
+    handleClick = id => {
+        console.log(id)
+        //has it been clicked
+        let goodGuess = false
+        let dontMessWithState = this.state.cards.map(card => {
+            let newCard = card
+            if (newCard.id === id) {
+                if (newCard.clicked === 0) {
+                    newCard.clicked = 1
+                    goodGuess = true
+                }
+            }
+            return newCard
+        })
+        if (goodGuess) {
+            const newScore = this.state.score + 1
+            this.setState({
+                cards: this.shuffleCards(dontMessWithState),
+                score: newScore
+            })
+            // they got it right-set state
+        } else {
+            //they got it wrong- deal with that
+            //reset all clicked properties to 0 from dontMessWithState
+            //handle score
+            this.setState({
+                score: 0
+            })
+        }
+
+        //if/else
+    }
+    shuffleCards = (array) => {
+        for (let i = 0; i < array.length; i++) {
+            const j = Math.floor(Math.random() * array.length)
+            const temp = array[i]
+            array[i] = array[j]
+            array[j] = temp;
+
+        }
+    }
+    // onClick={this.state.shuffleCards()
     render() {
 
         return (
             <Container>
 
-                {this.state.map(card => (
+                {this.state.cards.map(card => (
                     //call shuffleCards method in the onClick event
-                    <img
-                        src={card.source} onClick={this.state.clicked = 1}
-                    />
+                    <Card id={card.id} source={card.source} handleClick={this.handleClick} key={card.id} />
 
                 ))}
             </Container>
+
         )
     }
 

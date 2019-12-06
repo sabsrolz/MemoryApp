@@ -2,13 +2,7 @@ import React from "react";
 
 function Card(props) {
     return (
-        <div className="card text-center">
-            <div className="card-header">
-                <h2>{props.heading}</h2>
-                <h2>{props.score}</h2>
-            </div>
-            <div className="card-body">{props.children}</div>
-        </div>
+        <img src={props.source} onClick={() => props.handleClick(props.id)} alt={props.id} style={{ height: '300px', width: "200px" }}></img>
     );
 }
 
