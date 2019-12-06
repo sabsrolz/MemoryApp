@@ -9,6 +9,7 @@ class CardsContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { cards, score: 0 }
+        console.log(this.state.cards)
     }
 
     //componentDidMount()
@@ -33,8 +34,11 @@ class CardsContainer extends Component {
                     goodGuess = true
                 }
             }
+            //console.log(newCard)
+            //console.log(cards)
+            console.log(this.state.score)
             return newCard
-        })
+        });
         if (goodGuess) {
             const newScore = this.state.score + 1
             this.setState({
@@ -47,6 +51,7 @@ class CardsContainer extends Component {
             //reset all clicked properties to 0 from dontMessWithState
             //handle score
             this.setState({
+                cards: this.shuffleCards(dontMessWithState),
                 score: 0
             })
         }
@@ -61,6 +66,7 @@ class CardsContainer extends Component {
             array[j] = temp;
 
         }
+        return array
     }
     // onClick={this.state.shuffleCards()
     render() {
