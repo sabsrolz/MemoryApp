@@ -1,17 +1,52 @@
 [
-    {
-        "id": 1,
-        "source": "http://via.placeholder.com/640x360",
-        "clicked": 0
-    },
-    {
-        "id": 2,
-        "source": "https://via.placeholder.com/300",
-        "clicked": 0
-    },
-    {
-        "id": 3,
-        "source": "https://dummyimage.com/640x360/fff/aaa",
-        "clicked": 0
-    }
+  {
+    "id": 1,
+    "source": "https://www.colorcombos.com/images/colors/88D2F2.png",
+    "clicked": 0
+  },
+  {
+    "id": 2,
+    "source": "https://www.colorcombos.com/images/colors/e9d65c.png",
+    "clicked": 0
+  },
+  {
+    "id": 3,
+    "source": "https://www.colorcombos.com/images/colors/ac0501.png",
+    "clicked": 0
+  },
+  {
+    "id": 4,
+    "source": "https://www.colorcombos.com/images/colors/501885.png",
+    "clicked": 0
+  },
+  {
+    "id": 5,
+    "source": "https://www.colorcombos.com/images/colors/e7939f.png",
+    "clicked": 0
+  },
+  {
+    "id": 6,
+    "source": "https://www.colorcombos.com/images/colors/f8a000.png",
+    "clicked": 0
+  },
+  {
+    "id": 7,
+    "source": "https://www.colorcombos.com/images/colors/4ab616.png",
+    "clicked": 0
+  },
+  {
+    "id": 8,
+    "source": "https://www.colorcombos.com/images/colors/924900.png",
+    "clicked": 0
+  },
+  {
+    "id": 9,
+    "source": "https://www.colorcombos.com/images/colors/020076.png",
+    "clicked": 0
+  },
+  {
+    "id": 10,
+    "source": "https://www.colorcombos.com/images/colors/4d4d4d.png",
+    "clicked": 0
+  }
 ]
