@@ -1,0 +1,1 @@
+{"version":3,"sources":["cardsContainer.css"],"names":[],"mappings":"AAAA,iBACE,YAAa,CACb,yDAA4D,CAC5D,aACF","file":"main.4803ee5e.chunk.css","sourcesContent":[".cards-container {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\r\n  grid-gap: 1rem;\r\n}\r\n"]}
