@@ -6,6 +6,7 @@ import Card from "./Card";
 import Score from "./score";
 import Message from "./message";
 import cards from "../cards.json";
+import "./cardsContainer.css";
 let scores = [0];
 
 //console.log(cards);
@@ -109,17 +110,18 @@ class CardsContainer extends Component {
           topScore={this.state.Score.topScore}
         ></Score>
         <Message message={this.state.Message.message}></Message>
+        <div className="cards-container">
+          {this.state.cards.map(card => (
+            //call shuffleCards method in the onClick event
 
-        {this.state.cards.map(card => (
-          //call shuffleCards method in the onClick event
-
-          <Card
-            id={card.id}
-            source={card.source}
-            handleClick={this.handleClick}
-            key={card.id}
-          />
-        ))}
+            <Card
+              id={card.id}
+              source={card.source}
+              handleClick={this.handleClick}
+              key={card.id}
+            />
+          ))}
+        </div>
       </Container>
     );
   }
